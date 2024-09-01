@@ -1,0 +1,100 @@
+/* Basic Reset for Padding and Margin */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1 {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    top: 30px;
+    font-size: 28px;
+    padding: 10px 20px; /* Adds space around the text */
+    margin: 20px auto;  /* Centers the element horizontally */
+    text-align: center;
+    background-color: rgb(58, 92, 58, 0.5);
+    color: rgb(196, 251, 194);
+    border: 2px solid black;
+    border-radius: 50px;
+    width: auto;         /* Width adjusts to fit content */
+    display: block; /* Shrinks width to fit content and enables padding to affect size */
+    position: absolute;  /* Keeps the element in the normal flow, but can still use top/left if needed */
+}
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative; /* Ensures the pseudo-element is relative to the body */
+}
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('background.png'); /* Path to your background image */
+    background-size: cover; /* Make sure the background covers the whole area */
+    background-position: center; /* Center the background image */
+    filter: blur(5px); /* Apply a blur effect */
+    z-index: -1; /* Make sure the background stays behind other content */
+}
+/* Container Styling */
+.container {
+    display: flex;            /* Arrange boxes in a row */
+    justify-content: center;  /* Center boxes horizontally */
+    align-items: center;      /* Center boxes vertically */
+    height: 100vh;           /* Full viewport height */
+}
+
+/* Individual Box Styling */
+.box{
+    border: 3px solid black;
+    width: 20vw;
+    height: 52vh;
+    background-color: #4CAF50; /* Green background */
+    margin: 20px;              /* Space between boxes */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;        /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+    cursor: pointer;           /* Pointer cursor on hover */
+}
+
+/* Hover Effect on Boxes */
+.box:hover {
+    transform: scale(1.1);     /* Slightly increase size on hover */
+}
+
+/* Link Styling */
+#cropsubmission{
+    background-image: url(crop.png) ;
+    background-size: cover;
+    overflow: hidden;
+}
+#buyer{
+    background-image: url(buyer.png) ;
+    background-size: cover;
+    overflow: hidden;
+}
+#fhelp{
+    background-image: url(fhelp.png) ;
+    background-size: cover;
+    overflow: hidden;
+}
+.box div{
+    padding: 10px 20px;
+    margin: auto;
+    border-radius: 20px;
+    position: relative;
+    width: 80%;
+    text-align: center;
+    background-color: rgb(0, 0, 0, 0.7);
+    color: white;
+    font-size: 3vh;
+}
