@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="loginstyle.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Farmer Login Form</h2>
+        <form>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="[0-9]{10}">
+
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password">
+
+            <!-- Button to navigate to another page -->
+            <button type="button" onclick="window.location.href = 'farmer/farmer.html';">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
