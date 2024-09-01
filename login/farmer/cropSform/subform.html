@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Update Form</title>
+    <link rel="stylesheet" href="subform.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Crop Update Form</h1>
+        <form id="cropForm">
+            <div class="form-group">
+                <label for="cropName">Crop Name:</label>
+                <input type="text" id="cropName" name="cropName" placeholder="What crop are you growing?" >
+            </div>
+            <div class="form-group">
+                <label for="sowingDate">Sowing Date:</label>
+                <input type="date" id="sowingDate" name="sowingDate" >
+            </div>
+            <div class="form-group">
+                <label for="growthStatus">Growth Status:</label>
+                <textarea id="growthStatus" name="growthStatus" rows="4" placeholder="How is the crop ?" ></textarea>
+            </div>
+            <div class="form-group">
+                <label for="pestProblems">Pest Problems:</label>
+                <textarea id="pestProblems" name="pestProblems" rows="4" placeholder="Are you facing any issues regarding pests"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="irrigation">Irrigation :</label>
+                <textarea id="irrigation" name="irrigation" rows="4" placeholder="Did you have enough facilities for proper irrigation ?"></textarea>
+            </div>
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function submitForm() {
+
+            alert('Form submitted successfully!');
+
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
